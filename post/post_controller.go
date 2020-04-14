@@ -9,7 +9,7 @@ import (
 func GetPost(c echo.Context) error {
 	p := &Post{
 		Title:  "Hello World",
-		Detail: "Lorem 2020",
+		Detail: "Lorem 2021",
 	}
 	return c.JSON(http.StatusOK, p)
 }
