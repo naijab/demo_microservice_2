@@ -2,15 +2,17 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: demo-ms-post-service
+  labels:
+    environment: production
 spec:
   selector:
     matchLabels:
-      foo: post-service
+      app: post-service
   replicas: 1
   template:
     metadata:
       labels:
-        foo: post-service
+        app: post-service
     spec:
       containers:
         - name: demo-ms-post-service
