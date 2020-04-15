@@ -1,9 +1,10 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: demo-ms-post-service
+  name: post-service
+  namespace: demo-micro-service-development
   labels:
-    environment: production
+    app: post-service
 spec:
   selector:
     matchLabels:
@@ -15,7 +16,7 @@ spec:
         app: post-service
     spec:
       containers:
-        - name: demo-ms-post-service
+        - name: post-service
           image: post_service
           ports:
             - containerPort: 1332
