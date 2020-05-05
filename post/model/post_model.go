@@ -1,7 +1,7 @@
-package post
+package model
 
 type Post struct {
-	Id     int    `json:"id"`
+	Id     int    `gorm:"primary_key" json:"id"`
 	Title  string `json:"title"`
 	Detail string `json:"detail"`
 }
